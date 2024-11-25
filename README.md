@@ -1,17 +1,8 @@
-# Hello-React
+# React + Vite
 
-1. install React and create-react-app
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-`Webpack`
+Currently, two official plugins are available:
 
-```bash
-npx create-react-app my-app
-```
-
-`Vite`
-
-```bash
-npm create vite@latest my-app -- --template react
-```
-
-2.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
