@@ -1,31 +1,47 @@
-//  styling with in object
+import React from "react";
+
 function App() {
   return (
-    // empty element <></>
-    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </div>
+    console.log("Hello React"),
+    (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          backgroundColor: "lightblue",
+        }}
+      >
+        <Card
+          title="flutter"
+          description="React Native is a framework for building native apps using React. It allows you to use your existing React skills and libraries to build apps for iOS and Android."
+          src="https://img.icons8.com/?size=28&id=GTunOHQmqTgt&format=png"
+        />
+        <Card
+          title="React "
+          description="React Elements is a collection of UI components that can be used to build React apps. It provides a set of reusable components that cover common UI elements like buttons, forms, and navigation."
+          src="https://img.icons8.com/?size=100&id=NfbyHexzVEDk&format=png"
+        />
+      </div>
+    )
   );
 }
-function Card() {
+
+function Card({ title, description, src }) {
+  // const title = props.title;
+  // const description = props.description;
+  //   const { title, description } = props;
   return (
     <div
       style={{
-        width: "200px",
-        padding: "10px",
+        margin: "20px",
         border: "1px solid black",
+        padding: "20px",
+        width: "300px",
       }}
     >
-      <img src="https://picsum.photos/200" alt="card" />
-      <h1>heading</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-        perspiciatis vel facilis esse suscipit quisquam.
-      </p>
+      <h1>{title}</h1>
+      <img src={src} alt={title} />
+      <p>{description}</p>
     </div>
   );
 }
